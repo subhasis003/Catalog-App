@@ -73,8 +73,8 @@ class _LoginPageState extends State<LoginPage> {
                             borderRadius:
                                 BorderRadius.circular(changeButton ? 50 : 8)),
                         child: changeButton
-                            ? Icon(Icons.done, color: Colors.white)
-                            : Text(
+                            ? const Icon(Icons.done, color: Colors.white)
+                            : const Text(
                                 "Login",
                                 style: TextStyle(
                                     color: Colors.white,
