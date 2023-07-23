@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 
+import "../widgets/drawer.dart";
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class HomePage extends StatelessWidget {
           child: Text("$name welcomes you to $days days of flutter"),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
