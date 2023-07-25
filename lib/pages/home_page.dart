@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
         // backgroundColor: Colors.white,
         // elevation: 0.0,
         // iconTheme: IconThemeData(color: Colors.black),
-        title: Text(
+        title: const Text(
           "Catalog App",
 
         ),
