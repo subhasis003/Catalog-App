@@ -18,7 +18,7 @@ class Item {
 
 final products = [
   Item(
-      id: "subh01",
+      id: "subh001",
       name: "POCO M2 Pro",
       desc: "Poco M2 pro 6gb 64gb variant",
       price: 15000,
