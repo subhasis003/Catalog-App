@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "POCO M2 Pro",
+            "desc": "Poco M2 pro 6gb 64gb variant",
+            "price": 15000,
+            "color": "blue",
+            "image": "https://m.media-amazon.com/images/I/81w3UsCHEtL._SY606_.jpg"
+        },
+        {
+            "id": 2,
+            "name": "POCO M3 Pro",
+            "desc": "Poco M2 pro 6gb 64gb variant",
+            "price": 15000,
+            "color": "blue",
+            "image": "https://m.media-amazon.com/images/I/81w3UsCHEtL._SY606_.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Note 9 Pro",
+            "desc": "Poco M2 pro 6gb 64gb variant",
+            "price": 15000,
+            "color": "blue",
+            "image": "https://m.media-amazon.com/images/I/81w3UsCHEtL._SY606_.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Note 10 Pro",
+            "desc": "Poco M2 pro 6gb 64gb variant",
+            "price": 15000,
+            "color": "blue",
+            "image": "https://m.media-amazon.com/images/I/81w3UsCHEtL._SY606_.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Iphone X",
+            "desc": "Poco M2 pro 6gb 64gb variant",
+            "price": 15000,
+            "color": "blue",
+            "image": "https://m.media-amazon.com/images/I/81w3UsCHEtL._SY606_.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Iphone 12",
+            "desc": "Poco M2 pro 6gb 64gb variant",
+            "price": 15000,
+            "color": "blue",
+            "image": "https://m.media-amazon.com/images/I/81w3UsCHEtL._SY606_.jpg"
+        }
+    ]
+}
