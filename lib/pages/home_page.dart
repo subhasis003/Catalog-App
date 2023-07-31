@@ -1,6 +1,9 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:convert';
+
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
-import 'dart:convert';
+
 import "package:flutter_catalog/models/catalog.dart";
 import "package:flutter_catalog/widgets/item_widget.dart";
 
@@ -22,32 +25,36 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
+    await Future.delayed(Duration(seconds: 2));
     final catalogJson =
         await rootBundle.loadString("assets/files/catalog.json");
     final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["products"];
-    print(productsData);
+    CatalogModel.items = List.from(productsData)
+        .map<Item>((item) => Item.fromMap(item))
+        .toList();
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
-
     return Scaffold(
       appBar: AppBar(
-        // backgroundColor: Colors.white,
-        // elevation: 0.0,
-        // iconTheme: IconThemeData(color: Colors.black),
         title: const Text(
           "Catalog App",
         ),
       ),
-      body: ListView.builder(
-        itemCount: dummyList.length,
-        itemBuilder: (context, index) {
-          return ItemWidget(item: dummyList[index]);
-        },
-      ),
+      body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+              ? ListView.builder(
+                  itemCount: CatalogModel.items.length,
+                  itemBuilder: (context, index) =>
+                      ItemWidget(item: CatalogModel.items[index]),
+                )
+              : Center(
+                  child: CircularProgressIndicator(),
+                )),
       drawer: MyDrawer(),
     );
   }
