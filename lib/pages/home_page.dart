@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                   itemBuilder: (context, index) =>
                       ItemWidget(item: CatalogModel.items[index]),
                 )
-              : Center(
+              : const Center(
                   child: CircularProgressIndicator(),
                 )),
       drawer: MyDrawer(),
