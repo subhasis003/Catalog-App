@@ -4,7 +4,7 @@ import 'package:flutter_catalog/models/catalog.dart';
 class ItemWidget extends StatelessWidget {
   final Item item;
 
-  const ItemWidget({super.key, required this.item}) : assert(item != null);
+  const ItemWidget({super.key, required this.item});
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -18,7 +18,7 @@ class ItemWidget extends StatelessWidget {
         trailing: Text(
           "\u{20B9}${item.price}",
           style:
-              TextStyle(color: Colors.deepPurple, fontWeight: FontWeight.bold),
+              const TextStyle(color: Colors.deepPurple, fontWeight: FontWeight.bold),
         ),
       ),
     );

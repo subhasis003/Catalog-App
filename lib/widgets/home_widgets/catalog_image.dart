@@ -6,7 +6,7 @@ import '../themes.dart';
 class CatalogImage extends StatelessWidget {
   final String image;
 
-  const CatalogImage({super.key, required this.image}) : assert(image != null);
+  const CatalogImage({super.key, required this.image});
   @override
   Widget build(BuildContext context) {
     return Image.network(

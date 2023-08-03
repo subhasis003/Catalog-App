@@ -4,6 +4,8 @@ import 'package:velocity_x/velocity_x.dart';
 import '../themes.dart';
 
 class CatatlogHeader extends StatelessWidget {
+  const CatatlogHeader({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

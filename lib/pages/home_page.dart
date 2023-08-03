@@ -13,6 +13,8 @@ import '../widgets/home_widgets/catalog_header.dart';
 import '../widgets/home_widgets/catalog_list.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -28,7 +30,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 2));
     final catalogJson =
         await rootBundle.loadString("assets/files/catalog.json");
     final decodedData = jsonDecode(catalogJson);
@@ -48,11 +50,11 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CatatlogHeader(),
-              if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-                CatalogList().py16().expand()
+              const CatatlogHeader(),
+              if (CatalogModel.items.isNotEmpty)
+                const CatalogList().py16().expand()
               else
-                CircularProgressIndicator().centered().expand(),
+                const CircularProgressIndicator().centered().expand(),
             ],
           ),
         ),

@@ -4,10 +4,11 @@ import 'package:flutter_catalog/pages/home_detail_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../themes.dart';
-import 'catalog_header.dart';
 import 'catalog_image.dart';
 
 class CatalogList extends StatelessWidget {
+  const CatalogList({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -36,8 +37,7 @@ class CatalogList extends StatelessWidget {
 class CatalogItem extends StatelessWidget {
   final Item catalog;
 
-  const CatalogItem({super.key, required this.catalog})
-      : assert(catalog != null);
+  const CatalogItem({super.key, required this.catalog});
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ class CatalogItem extends StatelessWidget {
                         backgroundColor: MaterialStateProperty.all(
                           MyTheme.darkBluishColor,
                         ),
-                        shape: MaterialStateProperty.all(StadiumBorder())),
+                        shape: MaterialStateProperty.all(const StadiumBorder())),
                     child: "Buy".text.make(),
                   )
                 ],
