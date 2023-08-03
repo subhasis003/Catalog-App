@@ -33,8 +33,8 @@ class HomeDetailPage extends StatelessWidget {
                     MyTheme.darkBluishColor,
                   ),
                   shape: MaterialStateProperty.all(const StadiumBorder())),
-              child: "Buy".text.xl.make(),
-            ).wh(100, 50)
+              child: "Add to Cart".text.lg.make(),
+            ).wh(125, 50)
           ],
         ).p32(),
       ),
@@ -62,6 +62,12 @@ class HomeDetailPage extends StatelessWidget {
                         .make(),
                     catalog.desc.text.textStyle(context.captionStyle).lg.make(),
                     10.heightBox,
+                    "Consequat laboris sint do officia enim esse consequat Lorem non. Ipsum eu non pariatur ipsum cillum duis laboris pariatur culpa sunt fugiat irure. Tempor esse consectetur velit ea et elit exercitation. Aliqua Eiusmod ad"
+                        .text
+                        .textStyle(context.captionStyle)
+                        .align(TextAlign.justify)
+                        .make()
+                        .p16()
                   ],
                 ).py64(),
               ),

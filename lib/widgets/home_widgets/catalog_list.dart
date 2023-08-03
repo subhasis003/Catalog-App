@@ -62,22 +62,23 @@ class CatalogItem extends StatelessWidget {
                 buttonPadding: EdgeInsets.zero,
                 alignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  "\u{20B9}${catalog.price}".text.bold.lg.make(),
+                  "\u{20B9}${catalog.price}".text.bold.make(),
                   ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                          MyTheme.darkBluishColor,
-                        ),
-                        shape: MaterialStateProperty.all(const StadiumBorder())),
-                    child: "Buy".text.make(),
+                      backgroundColor: MaterialStateProperty.all(
+                        MyTheme.darkBluishColor,
+                      ),
+                      shape: MaterialStateProperty.all(const StadiumBorder()),
+                    ),
+                    child: "Add to Cart".text.make(),
                   )
                 ],
-              ).pOnly(right: 8)
+              ).pOnly(right: 8.0)
             ],
           ))
         ],
       ),
-    ).white.roundedLg.square(150).make().py16();
+    ).white.rounded.square(150).make().py16();
   }
 }
