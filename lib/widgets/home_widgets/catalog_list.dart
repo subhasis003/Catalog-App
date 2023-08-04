@@ -51,32 +51,33 @@ class CatalogItem extends StatelessWidget {
             ),
           ),
           Expanded(
-              child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
-              catalog.desc.text.textStyle(context.captionStyle).make(),
-              10.heightBox,
-              ButtonBar(
-                buttonPadding: EdgeInsets.zero,
-                alignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  "\u{20B9}${catalog.price}".text.bold.make(),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                        MyTheme.darkBluishColor,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
+                catalog.desc.text.textStyle(context.captionStyle).make(),
+                10.heightBox,
+                ButtonBar(
+                  buttonPadding: EdgeInsets.zero,
+                  alignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    "\u{20B9}${catalog.price}".text.bold.make(),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                          MyTheme.darkBluishColor,
+                        ),
+                        shape: MaterialStateProperty.all(const StadiumBorder()),
                       ),
-                      shape: MaterialStateProperty.all(const StadiumBorder()),
-                    ),
-                    child: "Add to Cart".text.make(),
-                  )
-                ],
-              ).pOnly(right: 8.0)
-            ],
-          ))
+                      child: "Add to Cart".text.make(),
+                    )
+                  ],
+                ).pOnly(right: 8.0)
+              ],
+            ),
+          )
         ],
       ),
     ).white.rounded.square(150).make().py16();
