@@ -8,7 +8,7 @@ class MyTheme {
         appBarTheme: const AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
-          // iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: IconThemeData(color: Colors.black),
           // titleTextStyle: Theme.of(context).appBarTheme;
           titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
         ),
@@ -17,8 +17,7 @@ class MyTheme {
         brightness: Brightness.dark,
       );
 
-      //Colors
-      static Color creamColor = const Color(0xfff5f5f5);
-      static Color darkBluishColor = const Color(0xff403b58);
-
+  //Colors
+  static Color creamColor = const Color(0xfff5f5f5);
+  static Color darkBluishColor = const Color(0xff403b58);
 }
