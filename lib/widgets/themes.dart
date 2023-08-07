@@ -8,8 +8,10 @@ class MyTheme {
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: Colors.white,
         canvasColor: MyTheme.creamColor,
-        primaryColor: darkBluishColor,
-        hintColor: darkBluishColor,
+        highlightColor: darkBluishColor,
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary: darkBluishColor,
+        ),
         appBarTheme: const AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
@@ -19,16 +21,18 @@ class MyTheme {
         ),
       );
   static ThemeData darkTheme(BuildContext context) => ThemeData(
-        brightness: Brightness.dark,
         cardColor: Colors.black,
         canvasColor: MyTheme.darkCreamColor,
-        primaryColor: lightBluishColor,
-        hintColor: Colors.white,
+        highlightColor: lightBluishColor,
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary: Colors.white,
+          brightness: Brightness.dark,
+        ),
         fontFamily: GoogleFonts.poppins().fontFamily,
         appBarTheme: const AppBarTheme(
           color: Colors.black,
           elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: IconThemeData(color: Colors.white),
           // titleTextStyle: Theme.of(context).appBarTheme;
           titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
         ),
