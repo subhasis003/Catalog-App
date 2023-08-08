@@ -30,11 +30,15 @@ class MyTheme {
         ),
         fontFamily: GoogleFonts.poppins().fontFamily,
         appBarTheme: const AppBarTheme(
-          color: Colors.black,
+          color: Colors.white,
           elevation: 0.0,
           iconTheme: IconThemeData(color: Colors.white),
           // titleTextStyle: Theme.of(context).appBarTheme;
-          titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
+
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+          ),
         ),
       );
 
