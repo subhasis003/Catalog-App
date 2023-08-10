@@ -10,6 +10,7 @@ class CartModel {
   final List<int> _itemIDs = [];
 
   //get catalog
+  //get catalog
   CatalogModel get catalog => _catalog;
 
   set catalog(CatalogModel newCatalog) {
