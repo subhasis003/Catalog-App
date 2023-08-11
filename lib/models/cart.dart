@@ -3,8 +3,8 @@ import 'package:flutter_catalog/models/catalog.dart';
 
 class CartModel {
   //catalog field
-  CatalogModel _catalog;
-  CartModel(CatalogModel newCatalog) : _catalog = newCatalog;
+  late CatalogModel _catalog;
+  // CartModel(CatalogModel newCatalog) : _catalog = newCatalog;
 
   //collection of IDs -store IDs of each item
   final List<int> _itemIDs = [];
