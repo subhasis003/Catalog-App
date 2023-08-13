@@ -69,6 +69,7 @@ class cartTotal extends StatelessWidget {
 class cartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    VxState.watch(context, on: [RemoveMutation]);
     final CartModel _cart = (VxState.store as MyStore).cart;
 
     return _cart.items.isEmpty
@@ -81,9 +82,7 @@ class cartList extends StatelessWidget {
                 icon: const Icon(
                   Icons.remove_circle_outline,
                 ),
-                onPressed: () {
-                  _cart.remove(_cart.items[index]);
-                },
+                onPressed: () => RemoveMutation(_cart.items[index]),
               ),
               title: _cart.items[index].name.text.make(),
             ),
