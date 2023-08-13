@@ -7,6 +7,7 @@ class MyStore extends VxStore {
   CartModel cart = CartModel();
 
   MyStore() {
+    cart = CartModel();
     cart.catalog = catalog;
   }
 }
