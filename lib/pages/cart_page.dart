@@ -33,18 +33,24 @@ class cartTotal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _cart = CartModel();
+    // print("Rebuild happened");
+    final CartModel _cart = (VxState.store as MyStore).cart;
 
     return SizedBox(
       height: 200,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          "\u{20B9}${_cart.totalPrice}"
-              .text
-              .xl4
-              .color(context.theme.colorScheme.secondary)
-              .make(),
+          VxConsumer(
+            mutations: {RemoveMutation},
+            builder: (context, _, __) {
+              return "\u{20B9}${_cart.totalPrice}"
+                  .text
+                  .xl4
+                  .color(context.theme.colorScheme.secondary)
+                  .make();
+            },
+          ),
           30.widthBox,
           ElevatedButton(
             onPressed: () {
