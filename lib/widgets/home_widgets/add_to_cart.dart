@@ -5,6 +5,8 @@ import 'package:velocity_x/velocity_x.dart';
 import '../../models/cart.dart';
 import '../../models/catalog.dart';
 
+import 'package:http/http.dart';
+
 class AddToCart extends StatelessWidget {
   final Item catalog;
 

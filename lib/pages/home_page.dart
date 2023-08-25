@@ -4,6 +4,8 @@ import 'dart:convert';
 
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
+import 'package:flutter_catalog/core/store.dart';
+import 'package:flutter_catalog/models/cart.dart';
 
 import "package:flutter_catalog/models/catalog.dart";
 import 'package:flutter_catalog/utils/routes.dart';
@@ -23,6 +25,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int days = 30;
   String name = "Subhasis";
+
+  final url = "";
 
   @override
   void initState() {
@@ -44,17 +48,28 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
       backgroundColor: context.canvasColor,
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: context.theme.highlightColor,
-        onPressed: () {
-          Navigator.pushNamed(context, MyRoutes.cartRoute);
-        },
-        child: const Icon(
-          Icons.shopping_cart_outlined,
-          color: Colors.white,
-        ),
+      floatingActionButton: VxBuilder(
+        mutations: {AddMutation, RemoveMutation},
+        builder: (context, _, __) => FloatingActionButton(
+          backgroundColor: context.theme.highlightColor,
+          onPressed: () {
+            Navigator.pushNamed(context, MyRoutes.cartRoute);
+          },
+          child: const Icon(
+            Icons.shopping_cart_outlined,
+            color: Colors.white,
+          ),
+        ).badge(
+            color: Vx.red500,
+            size: 22,
+            count: _cart.items.length,
+            textStyle: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            )),
       ),
       body: SafeArea(
         child: Container(
