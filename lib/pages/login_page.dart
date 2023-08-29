@@ -64,6 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                           } else if (value.isEmpty) {
                             return "Username cannot be empty";
                           }
+                          return null;
                         },
                         onChanged: (value) {
                           name = value;
@@ -84,6 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                           } else if (value.length < 6) {
                             return "Password length should be atleast 6";
                           }
+                          return null;
                         },
                       ),
                       const SizedBox(

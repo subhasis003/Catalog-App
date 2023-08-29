@@ -48,11 +48,11 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final _cart = (VxState.store as MyStore).cart;
+    final cart = (VxState.store as MyStore).cart;
     return Scaffold(
       backgroundColor: context.canvasColor,
       floatingActionButton: VxBuilder(
-        mutations: {AddMutation, RemoveMutation},
+        mutations: const {AddMutation, RemoveMutation},
         builder: (context, _, __) => FloatingActionButton(
           backgroundColor: context.theme.highlightColor,
           onPressed: () {
@@ -65,8 +65,8 @@ class _HomePageState extends State<HomePage> {
         ).badge(
             color: Vx.red500,
             size: 22,
-            count: _cart.items.length,
-            textStyle: TextStyle(
+            count: cart.items.length,
+            textStyle: const TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
             )),

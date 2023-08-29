@@ -11,7 +11,8 @@ class CatalogModel {
 
   //get item by ID
   Item getById(int id) {
-    return items.firstWhere((element) => element.id == id, orElse: null);
+    return items.firstWhere((element) => element.id == id,
+        orElse: () => Item(id: -1, name: 'Not Found'));
   }
 
   //get item by position
