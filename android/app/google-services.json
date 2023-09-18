@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "488235093917",
+    "project_id": "flutter-catalog-11218",
+    "storage_bucket": "flutter-catalog-11218.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488235093917:android:9935cab388839c8c232974",
+        "android_client_info": {
+          "package_name": "com.example.flutter_catalog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV_E7_KJkP3CIg04y1D8GqJ0rDVhdhHBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
