@@ -21,7 +21,7 @@ A Flutter Products Catalog app
       <manifest xmlns:android="http://schemas.android.com/apk/res/android">
         <uses-permission android:name="android.permission.INTERNET"/>
     ```
-- Run `flutter build apk` to build apk file
+- Run `flutter build apk --release` to build apk file
 - Wait until build apk for you
 - Download apk from `Assets` section of release
 
