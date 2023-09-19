@@ -2,11 +2,11 @@
     "products": [
         {
             "id": 1,
-            "name": "POCO M2 Pro",
-            "desc": "Poco M2 pro 6gb 64gb variant",
+            "name": "Iphone 15 pro",
+            "desc": "Iphone 15 pro 256gb variant",
             "price": 15000,
             "color": "blue",
-            "image": "https://m.media-amazon.com/images/I/81w3UsCHEtL._SY606_.jpg"
+            "image": "https://i3-prod-assets.indiaistore.com/files/uploads/products/pdp/iphone-15-pro-max-natural-titanium/pdp_1694703870_8596.png"
         },
         {
             "id": 2,
