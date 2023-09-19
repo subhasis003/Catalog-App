@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TextTheme textTheme = Theme.of(context).textTheme;
     return MaterialApp(
-      themeMode: ThemeMode.dark,
+      // themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),

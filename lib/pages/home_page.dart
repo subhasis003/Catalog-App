@@ -23,8 +23,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int days = 30;
-  String name = "Subhasis";
 
   final url = "";
 
